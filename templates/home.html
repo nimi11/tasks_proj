@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task Management Application</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body>
+    <h1>Welcome to the Task Management Application! {{user}}</h1>
+    <h3>What would you like to do</h3>
+    <ul>
+        <li><a href="{{ url_for('new_task', user=user) }}">Create a task</a></li>
+        <li><a href="{{ url_for('list_tasks', user=user) }}">View tasks</a></li>
+      
+    </ul>
+
+
+    <h5>Not {{user}} <a href="/users">CLICK HERE</a></h5>
+</body>
+</html>

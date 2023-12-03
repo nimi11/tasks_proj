@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Select User</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body>
+    <h1>Create a new User</h1>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="flashes">
+                {% for message in messages %}
+                    <p>{{ message }}</p>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+
+    {% if error %}
+        <p>{{ error }}</p>
+    {% endif %}
+
+    <form action="{{ url_for('user')}}" method="post">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" required><br>
+        <input type="submit" value="Select User">
+    </form>
+
+    <h4><a href="{{ url_for('users', user=user) }}">Already signed up, click here </a></h4>
+
+    <script>
+        // Function to hide flash messages after a delay
+        document.addEventListener('DOMContentLoaded', function () {
+            setTimeout(function () {
+                var flashes = document.querySelector('.flashes');
+                if (flashes) {
+                    flashes.style.display = 'none';
+                }
+            }, 1000);  // 2000 milliseconds (2 seconds)
+        });
+    </script>
+</body>
+</html>
