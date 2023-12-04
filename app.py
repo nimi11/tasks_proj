@@ -150,7 +150,7 @@ def edit_task(user, task_id):
             return redirect(url_for('list_tasks', user=user))
         
 
-@app.route('/<user>/tasks/<int:task_id>/delete', methods=['POST'])
+@app.route('/<user>/tasks/<int:task_id>/delete', methods=['POST','GET'])
 def delete_task(user, task_id):
     conn = get_db()
     cursor = conn.cursor()

@@ -6,11 +6,11 @@
 </head>
 <body>
     <h1>User List</h1>
-    <ul>
+    <ul id="all_users_list">
         {% for user in users %}
-            <li><a href="{{ url_for('home', user=user[1]) }}">{{ user[1] }}</a></li>
+           <h3><li><a href="{{ url_for('home', user=user[1]) }}">{{ user[1] }}</a></li></h3> 
         {% endfor %}
     </ul>
-    <h3><a href="/">Not here?</a></h3>
+    <h6 id="lost_user"><a href="/">Not here?</a></h6 >
 </body>
 </html>

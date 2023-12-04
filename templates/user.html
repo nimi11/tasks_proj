@@ -21,13 +21,16 @@
         <p>{{ error }}</p>
     {% endif %}
 
-    <form action="{{ url_for('user')}}" method="post">
+    <form id="new_user_form" action="{{ url_for('user')}}" method="post">
+        <fieldset>
+            <legend>New User</legend>
         <label for="username">Username:</label><br>
-        <input type="text" id="username" name="username" required><br>
-        <input type="submit" value="Select User">
+        <input id="new_user_field" type="text" id="username" name="username" required><br>
+        <button id="user_submit" type="submit" value="Select User">submit</button>
+     </fieldset>
     </form>
 
-    <h4><a href="{{ url_for('users', user=user) }}">Already signed up, click here </a></h4>
+    <h4 id="already_signed_text"><a href="{{ url_for('users', user=user) }}">Already signed up, click here </a></h4>
 
     <script>
         // Function to hide flash messages after a delay

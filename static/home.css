@@ -18,3 +18,43 @@ a{
 a:hover{
     color: gray;
 }
+button{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    
+}
+ul{
+    list-style-type: square;
+}
+/* User.html */
+#user_submit{
+    margin-top: 10px;
+}
+#new_user_form{
+    margin-left: 20px;
+}
+#new_user_field{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+#already_signed_text{
+    margin-top: 30px;
+    margin-left: 20px;
+}
+/* User.html ends */
+
+/* Users.html starts here */
+#all_users_list{
+    list-style-type: square;
+}
+#lost_user{
+    margin-left: 20px;
+    margin-top: 80px;
+}
+/* Users.html ends here */
+/* ist_task,html */
+#list_edit_button{
+  
+}
+
+/* List_tasks.html */
